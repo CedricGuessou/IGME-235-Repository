@@ -1,0 +1,46 @@
+﻿body{
+    font-family: Arial;
+}
+
+figure{
+    max-width: 650px;
+}
+
+figure img{
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+
+header, main, footer {
+    width: 90%;
+    margin: 0 auto 0 auto;
+}
+
+#tetlist{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/*Prevents the elements in the flexbox to grow larger
+but allows them to be narrower and set a specific starting width*/
+.tet {
+    flex: 0 1 150px;
+    text-align: center;
+}
+
+/*Make the images in the tet flexboxes a certain %age of the width*/
+.tet img{
+    width: 60%
+}
+
+span {
+    display: block;
+    margin: 20px 0 10px 0;
+    font-weight: bold;
+    font-size-adjust: .6;
+}
+
+.aliases{
+    text-align: left;
+    margin: .7em;
+}
