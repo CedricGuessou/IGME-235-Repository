@@ -1,0 +1,14 @@
+﻿header img{
+    width: 150px;
+    float: right;
+    position: relative;
+    top: -50px
+}
+
+header{
+}
+
+h2 {
+    border-top: 3px black solid;
+    clear: right;
+}

@@ -1,14 +1,36 @@
 ﻿header img{
     width: 150px;
     float: right;
-    position: relative;
-    top: -50px
 }
 
-header{
+header, main, footer{
+    background-color: white;
+    margin: 0 150px 0 150px;
+    padding: 2em
+}
+
+body {
+    background-color: dodgerblue;
+    font-family: Arial;
 }
 
 h2 {
     border-top: 3px black solid;
     clear: right;
+}
+
+a:link {
+    color: #003049;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: gray;
+}
+
+a:active {
+    color: red;
 }

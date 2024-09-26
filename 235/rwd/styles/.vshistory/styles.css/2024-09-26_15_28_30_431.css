@@ -1,0 +1,26 @@
+/*RWD media queries*/
+
+
+/*IDs*/
+#skyblue{
+	color: skyblue;
+	background: #f1f1f1;
+} 
+#coral{
+	color: coral;
+	background: #f1f1f1;
+} 
+
+/*Generic Styles*/
+code {
+  display: block;
+  font-family: Consolas,"courier new";
+  color: crimson;
+  background-color: #f1f1f1;
+  padding: 1em;
+  white-space: pre;
+  
+  overflow-x: scroll;
+  max-width: 100%;
+  min-width: 100px;
+} 
