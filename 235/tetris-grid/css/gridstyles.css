@@ -1,0 +1,98 @@
+/* It starts completely empty. I wish you luck. */
+body {
+    margin-left: 1rem;
+}
+
+h1.game {
+    grid-area: logo;
+}
+
+ul.menu {
+    grid-area: menu;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    ul.menu ul li {
+        width: 100%;
+    }
+
+    ul.menu ul {
+        display: none;
+    }
+
+    ul.menu li:hover ul {
+        display: flex;
+    }
+
+.menu a {
+    display: block;
+    background: gray;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu li {
+    width: 25%;
+}
+
+.menu a:hover {
+    background: red;
+    color: yellow;
+}
+
+#introduction {
+    grid-area: intro;
+}
+
+#tetgrid {
+    grid-area: playground;
+}
+
+footer {
+    grid-area: footer;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-areas:
+        "logo"
+        "menu"
+        "intro"
+        "playground"
+        "footer";
+}
+
+@media screen and (min-width: 850px) {
+    #wrapper {
+        display: grid;
+        grid-template-areas:
+            "logo       intro"
+            "menu       menu"
+            "playground playground"
+            "footer     footer";
+        grid-template-columns: 500px;
+        grid-template-rows: 350px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .menu li {
+        width: 100%;
+    }
+}
+
+h1.game {
+    width: 500px;
+    height: 345px;
+    background: url(../images/tetris-logo.png) no-repeat;
+    text-indent: -9999px;
+}
+
+#introduction{
+    margin: 2em 2em 2em 2em;
+}
