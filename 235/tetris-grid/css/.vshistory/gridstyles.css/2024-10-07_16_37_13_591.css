@@ -34,7 +34,6 @@ ul.menu li:hover ul {
     padding: 10px;
     color: white;
     text-decoration: none;
-    transition: transform 0.1s ease-in, background-color 0.5s linear;
 }
 
 .menu li {
@@ -44,17 +43,6 @@ ul.menu li:hover ul {
 .menu a:hover {
     background: red;
     color: yellow;
-    transform: scale(1.1);
-}
-
-.menu .submenu li > a:hover {
-    background: red;
-    color: yellow;
-}
-
-.menu .submenu > a:after {
-    content: "+";
-    padding-left: 5px;
 }
 
 #introduction {
@@ -63,75 +51,7 @@ ul.menu li:hover ul {
 
 #tetgrid {
     grid-area: playground;
-    display: grid;
-    grid-template-columns: repeat(6, 100px);
-    grid-template-rows: repeat(6, 100px);
 }
-
-img {
-    transition-property: transform;
-    transition-duration: 2s;
-}
-
-img:hover {
-    transform: rotate(-90deg);
-}
-
-#o {
-    grid-column: 1/3;
-    grid-row: 1/span 2;
-}
-
-#i {
-    grid-column: 3;
-    grid-row: span 1;
-}
-
-#z {
-    grid-column: 1/span 2;
-    grid-row: 3/span 3;
-}
-
-/*
-#z img {
-    transform-origin: 0 0;
-    transform: translateX(205px) rotate(90deg);
-}
-    */
-
-#l {
-    grid-column: 3/span 2;
-    grid-row: 2;
-}
-
-/*
-#l img {
-    /*transform-origin: 0 0;
-    transform: rotate(180deg);
-}
-    */
-
-#t {
-    grid-column: 4/span 2;
-    grid-row: 4;
-}
-
-#s {
-    grid-column: 6/span 2;
-    grid-row: 1;
-}
-
-#j {
-    grid-column: 5/span 2;
-    grid-row: 3;
-}
-
-/*
-#j img{
-    transform: rotate(180deg)
-}*/
-
-
 
 footer {
     grid-area: footer;
