@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\holygrail\\holygrail-grid.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:235\\holygrail\\holygrail-grid.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\holygrail\\holygrail-grid.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:235\\holygrail\\holygrail-grid.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,6 +31,28 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "holygrail-grid.css",
+              "DocumentMoniker": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\holygrail\\holygrail-grid.css",
+              "RelativeDocumentMoniker": "235\\holygrail\\holygrail-grid.css",
+              "ToolTip": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\holygrail\\holygrail-grid.css",
+              "RelativeToolTip": "235\\holygrail\\holygrail-grid.css",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-10-08T19:35:46.117Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "holygrail-grid.html",
+              "DocumentMoniker": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\holygrail\\holygrail-grid.html",
+              "RelativeDocumentMoniker": "235\\holygrail\\holygrail-grid.html",
+              "ToolTip": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\holygrail\\holygrail-grid.html",
+              "RelativeToolTip": "235\\holygrail\\holygrail-grid.html",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-10-08T19:35:43.376Z"
             }
           ]
         }
