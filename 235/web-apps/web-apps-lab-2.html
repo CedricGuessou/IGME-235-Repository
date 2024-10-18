@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>DOM-3</title>
+    <style>
+        body {
+            border: 1px solid gray;
+        }
+
+        p b {
+            transform: rotate(20deg)
+        }
+    </style>
+</head>
+<body>
+    <h1>My Page</h1>
+    <h2>Info</h2>
+    <h2>Pictures</h2>
+    <h2>More Info</h2>
+    <p>Blah <b>Blah</b> Blah</p>
+    <p>Blah <b>Blah</b> Blah</p>
+    <p id="lastParagraph">Blah <b>Blah</b> Blah</p>
+    <footer>Copyright &copy; <b>20XX</b></footer>
+    <script>
+	    "use strict";
+
+        // add your own code here.
+        // #1
+        document.querySelector("h1").innerHTML = "My UFO Page";
+
+        // #2
+        document.querySelector("h2").innerHTML = "My UFO Info";
+
+        // #3
+        document.querySelector("h2:nth-of-type(2)").innerHTML = "My UFO Pictures";
+
+        // #4
+        document.querySelector("h2:nth-of-type(3)").innerHTML = "";
+
+        // #5
+        let body = document.body;
+        body.style.fontFamily = "sans-serif";
+        body.style.color = "#C03416";
+
+        // #6
+        let text = document.querySelector("p");
+       // let a = document.createElement('a');
+        //let link = document.createTextNode();
+        // a.appendChild(link);
+        //a.href = "http://www.nuforc.org";
+
+        text.innerHTML = "Report your UFO sightings " + "<a href= 'http://www.nuforc.org'>here</a>";
+        text.style.color = "green";
+        text.style.fontWeight = "bold";
+        text.style.fontSize = "2em";
+        text.style.textTransform = "uppercase";
+        text.style.textShadow = "3px 2px #A44"
+
+        // #7
+        document.querySelector("p:nth-of-type(2)").innerHTML = "";
+
+        // #8
+        document.querySelector("p:nth-of-type(3)").innerHTML =
+            "<img src = 'https://cdn.britannica.com/99/200099-050-5BBFA23F/UFO-farm-McMinnville-Oregon-1950.jpg'" +
+            "style = 'width: 600px;'>";
+
+        // #9
+        document.querySelector("footer").innerHTML = "© 2024 Cedric Guessou";
+
+
+    </script>
+</body>
+</html>
