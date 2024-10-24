@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\project1\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:235\\project1\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\project1\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:235\\project1\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\web-apps\\web-apps-lab-4.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:235\\web-apps\\web-apps-lab-4.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -46,6 +54,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "styles.css",
+              "DocumentMoniker": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\project1\\css\\styles.css",
+              "RelativeDocumentMoniker": "235\\project1\\css\\styles.css",
+              "ToolTip": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\project1\\css\\styles.css",
+              "RelativeToolTip": "235\\project1\\css\\styles.css",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-10-19T21:02:15.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\project1\\index.html",
+              "RelativeDocumentMoniker": "235\\project1\\index.html",
+              "ToolTip": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\project1\\index.html",
+              "RelativeToolTip": "235\\project1\\index.html",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAowGoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-10-19T21:01:52.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "web-apps-lab-4.html",
               "DocumentMoniker": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\web-apps\\web-apps-lab-4.html",
               "RelativeDocumentMoniker": "235\\web-apps\\web-apps-lab-4.html",
@@ -58,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "web-apps-lab-2.html",
               "DocumentMoniker": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\web-apps\\web-apps-lab-2.html",
               "RelativeDocumentMoniker": "235\\web-apps\\web-apps-lab-2.html",
@@ -66,12 +100,11 @@
               "RelativeToolTip": "235\\web-apps\\web-apps-lab-2.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-10-18T01:59:56.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T01:59:56.353Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "web-apps-lab-1.html",
               "DocumentMoniker": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\web-apps\\web-apps-lab-1.html",
               "RelativeDocumentMoniker": "235\\web-apps\\web-apps-lab-1.html",
@@ -79,12 +112,11 @@
               "RelativeToolTip": "235\\web-apps\\web-apps-lab-1.html",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAABIAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-10-18T02:00:07.207Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T02:00:07.207Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "more-dom.html",
               "DocumentMoniker": "C:\\Users\\guess\\Downloads\\School Work\\IGME 235 Web Tech\\JavaScript stuff\\more-dom.html",
               "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\School Work\\IGME 235 Web Tech\\JavaScript stuff\\more-dom.html",
@@ -92,12 +124,11 @@
               "RelativeToolTip": "..\\..\\..\\Downloads\\School Work\\IGME 235 Web Tech\\JavaScript stuff\\more-dom.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-10-17T18:00:06.184Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T18:00:06.184Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "holygrail-grid.html",
               "DocumentMoniker": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\holygrail-grid\\holygrail-grid.html",
               "RelativeDocumentMoniker": "235\\holygrail-grid\\holygrail-grid.html",
@@ -105,8 +136,7 @@
               "RelativeToolTip": "235\\holygrail-grid\\holygrail-grid.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-10-14T03:34:16.864Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-14T03:34:16.864Z"
             }
           ]
         }
