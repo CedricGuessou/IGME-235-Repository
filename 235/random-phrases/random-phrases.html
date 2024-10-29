@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Random Phrases</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Macondo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body>
+    <h1>Gurren Lagann Quotes</h1>
+    <p id="quote">Quotes appear here</p>
+    <p id="source">Source here</p>
+    <button type="button">Generate Random Quote</button>
+    <footer>Copyright 2024 Cedric Guessou</footer>
+
+    <script>
+        "using strict";
+
+        window.onload = displayQuote;
+
+        let quote = document.querySelector("#quote");
+        let source = document.querySelector("#source");
+        let button = document.querySelector("button");
+        let quotes = [
+            "If there's a wall in our way then we smash it down! If there isn't a path, then we carve one ourselves!",
+            "Believe in the me that believe's in you",
+            "The human spirit is limitless! I've staked everything on its greatness, too!",
+            "Join with yesterday's foe to smash fate, and grab tomorrow's path with our own hands!",
+            "Your drill is the drill that will pierce the heavens!"
+
+        ]
+        let sources = ["Simon", "Kamina", "Nia Teppelin", "Viral", "Kamina"]
+
+        function displayQuote() {
+            let rand = Math.floor(Math.random() * 5);
+
+            quote.innerHTML = quotes[rand];
+            source.innerHTML = "-" + sources[rand];
+        }
+
+        button.onclick = displayQuote;
+    </script>
+</body>
+</html>
