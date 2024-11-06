@@ -89,6 +89,9 @@ function dataLoaded(e) {
     for (let i = 0; i < results.length; i++) {
         let result = results[i];
 
+        console.log(results[i]);
+        console.log(result.rating);
+
         // Get the URL to the GIF
         let smallURL = result.images.fixed_width_small.url;
 
@@ -98,7 +101,7 @@ function dataLoaded(e) {
         let url = result.url;
 
         // Build a <div> to hold each result
-        let line = `<div class = 'result'><img src = '${smallURL}' title = '${result.id}' />`;
+        let line = `<div class = 'result'><p>Rating: ${result.rating.toUpperCase()}</p><img src = '${smallURL}' title = '${result.id}' />`;
         line += "<span><a target = '_blank' href = '${url}'>View on Giphy</a></span></div>";
 
         // Add the <div> to "bigString" and loop

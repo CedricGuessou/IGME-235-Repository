@@ -43,13 +43,20 @@ header h1 {
     .result img {
         position: absolute;
         left: 5px;
-        bottom: 5px;
+        bottom: -10px;
         display: block;
+        max-height: 135px;
     }
 
     .result a{
         position: relative;
-        top: -70px;
+        top: -90px;
+    }
+
+    .result p{
+        position: relative;
+        top: -35px;
+        font-size: 12px;
     }
 
     .result span {
