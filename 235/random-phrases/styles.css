@@ -1,0 +1,52 @@
+﻿body {
+    background-color: midnightblue;
+    background-image: url("images/simone.jpg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    color: white;
+    max-width: 1600px;
+    min-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    font-family: "Gloria Hallelujah";
+}
+
+p {
+    margin: 0 auto;
+    max-width: 500px;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    top: 100px;
+}
+
+
+#source {
+    position: relative;
+    left: 100px;
+}
+
+button {
+    background-color: red;
+    color: lawngreen;
+    font-size: 20px;
+    position: relative;
+    margin: 0 auto;
+    top: 300px;
+    font-family: "Gloria Hallelujah";
+}
+
+button:hover {
+    background-color: blue;
+}
+
+button:active {
+    color: black;
+    background-color: red;
+}
+
+footer{
+    position: absolute;
+    top: 650px;
+    text-align: left;
+}

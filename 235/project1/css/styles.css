@@ -1,63 +1,60 @@
 ﻿body{
-    /*margin: 0 auto 0 auto;*/
+    background-color: orange;
 }
 
-#wrapper {
-    /*margin: -20px auto 0 100px;*/
+.wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "left right";
     max-width: 1200px;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 30px auto;
+}
+
+#fighterz .wrapper{
+    grid-template-areas: "right left";
 }
 
 img {
     position: relative;
-    left: -20px
+    border: solid 2px black;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-#left {
+.logo{
+    border: none;
+}
+
+.left {
     grid-area: left;
     display: flex;
     flex-direction: column;
-    max-width: 300px;
-    border: 1px solid black;
+    max-width: 350px;
 }
 
-#postit {
-    max-width: 300px;
-    height: 200px;
-    background-image: url("../media/image_p.jpg");
-    background-size: 300px;
-    background-repeat: no-repeat;
-    text-align: center;
-}
-    
-#left img {
-    max-width: 300px;
+.left img {
+    max-width: 350px;
     
     
 }
 
-#right {
+.right {
     grid-area: right;
     max-width: 400px;
-    border: 1px solid black;
 }
 
-#right img{
+.right img{
     max-width: 400px
 }
 
-#right h2{
+.right h2{
     color: gray;
     font-size: 23px;
     margin-top: -10px;
 }
 
-#right h3 {
+.right h3 {
     font-size: 35px;
-    max-width: 150px;
     margin-top: -10px;
     margin-bottom: -10px
 }
@@ -65,7 +62,7 @@ img {
 h1{
     background-color: yellow;
     background-size: 300px;
-    max-width: 400px
+    max-width: 700px
 }
 
 @media screen and (max-width: 760px) {
