@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\235",
+    "\\235\\gif-finder",
+    "\\235\\gif-finder\\js",
+    "\\235\\gif-finder\\styles"
   ],
-  "SelectedNode": "\\D:\\Profiles\\cdd8606\\Source\\Repos\\IGME-235-Repository",
+  "SelectedNode": "\\235\\gif-finder\\styles\\main.css",
   "PreviewInSolutionExplorer": false
 }
