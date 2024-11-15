@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>IGME-235 Project 2 Documentation</title>
+    <style>
+        body{
+            max-width: 1000px;
+        }
+        img{
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>IGME-235 Project 2 Documentation</h1>
+    <h2>Goal</h2>
+    <p>
+        My plan is to use the Pokemon API to make a website that searches 
+        for Pokemon based on types selected by the user and also provides a sample move set for it to use.
+        The target audience for this project is casual players who just want to have a solid move set for their Pokemon. 
+        If I end up having enough time, I will improve my algorithm to select the moves based on the specific game.
+    </p>
+
+    <h2>Notes</h2>
+    <ul>
+        <li>
+            I will be assuming that the Pokemon is being used in a 1v1 format (so as to avoid more complicated logic).
+        </li>
+        <li>
+            The move set type will be determined by the chosen Pokemon's stats. For example:
+            If the Pokemon has Attack and Special Attack as its highest stats an offensive move set will be created.
+        </li>
+        <li>
+            Use the stats property to campare and see what type of moveset this Pokemon should use
+        </li>
+        <li>
+
+        </li>
+    </ul>
+
+    <h2>Moveset Types</h2>
+    <ul>
+        <li>
+            <b>Main Damage Dealers (Offensive): </b>Chosen if attack or special attack is the dominant stat. 
+            They have two offensive moves that match their typing, one move to counter
+            types they are weak to and another move for stat buffs
+        </li>
+    </ul>
+
+    <h2>Basic Sketch</h2>
+    <img src="src/template.png" alt="Website Sketch Image">
+
+    <h2>Resources</h2>
+    <a href="https://pokeapi.co/">Pokemon API Documentation Link</a>
+</body>
+</html>

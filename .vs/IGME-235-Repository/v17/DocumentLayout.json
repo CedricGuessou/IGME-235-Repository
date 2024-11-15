@@ -1,10 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Profiles\\cdd8606\\source\\repos\\IGME-235-Repository\\",
+  "WorkspaceRootPath": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Profiles\\cdd8606\\source\\repos\\IGME-235-Repository\\235\\gif-finder\\gif-finder.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:235\\gif-finder\\gif-finder.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\project1\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:235\\project1\\css\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\project1\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:235\\project1\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\web-apps\\web-apps-lab-4.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:235\\web-apps\\web-apps-lab-4.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\web-apps\\web-apps-lab-2.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:235\\web-apps\\web-apps-lab-2.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\web-apps\\web-apps-lab-1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:235\\web-apps\\web-apps-lab-1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\guess\\Downloads\\School Work\\IGME 235 Web Tech\\JavaScript stuff\\more-dom.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\holygrail-grid\\holygrail-grid.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:235\\holygrail-grid\\holygrail-grid.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +37,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -29,21 +52,89 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "styles.css",
+              "DocumentMoniker": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\project1\\css\\styles.css",
+              "RelativeDocumentMoniker": "235\\project1\\css\\styles.css",
+              "ToolTip": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\project1\\css\\styles.css",
+              "RelativeToolTip": "235\\project1\\css\\styles.css",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-10-19T21:02:15.342Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "gif-finder.html",
-              "DocumentMoniker": "D:\\Profiles\\cdd8606\\source\\repos\\IGME-235-Repository\\235\\gif-finder\\gif-finder.html",
-              "RelativeDocumentMoniker": "235\\gif-finder\\gif-finder.html",
-              "ToolTip": "D:\\Profiles\\cdd8606\\source\\repos\\IGME-235-Repository\\235\\gif-finder\\gif-finder.html",
-              "RelativeToolTip": "235\\gif-finder\\gif-finder.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\project1\\index.html",
+              "RelativeDocumentMoniker": "235\\project1\\index.html",
+              "ToolTip": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\project1\\index.html",
+              "RelativeToolTip": "235\\project1\\index.html",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAowGoAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-06T17:07:36.623Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-19T21:01:52.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "web-apps-lab-4.html",
+              "DocumentMoniker": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\web-apps\\web-apps-lab-4.html",
+              "RelativeDocumentMoniker": "235\\web-apps\\web-apps-lab-4.html",
+              "ToolTip": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\web-apps\\web-apps-lab-4.html",
+              "RelativeToolTip": "235\\web-apps\\web-apps-lab-4.html",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACQAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-10-18T04:27:43.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "web-apps-lab-2.html",
+              "DocumentMoniker": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\web-apps\\web-apps-lab-2.html",
+              "RelativeDocumentMoniker": "235\\web-apps\\web-apps-lab-2.html",
+              "ToolTip": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\web-apps\\web-apps-lab-2.html",
+              "RelativeToolTip": "235\\web-apps\\web-apps-lab-2.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-10-18T01:59:56.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "web-apps-lab-1.html",
+              "DocumentMoniker": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\web-apps\\web-apps-lab-1.html",
+              "RelativeDocumentMoniker": "235\\web-apps\\web-apps-lab-1.html",
+              "ToolTip": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\web-apps\\web-apps-lab-1.html",
+              "RelativeToolTip": "235\\web-apps\\web-apps-lab-1.html",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABIAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-10-18T02:00:07.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "more-dom.html",
+              "DocumentMoniker": "C:\\Users\\guess\\Downloads\\School Work\\IGME 235 Web Tech\\JavaScript stuff\\more-dom.html",
+              "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\School Work\\IGME 235 Web Tech\\JavaScript stuff\\more-dom.html",
+              "ToolTip": "C:\\Users\\guess\\Downloads\\School Work\\IGME 235 Web Tech\\JavaScript stuff\\more-dom.html",
+              "RelativeToolTip": "..\\..\\..\\Downloads\\School Work\\IGME 235 Web Tech\\JavaScript stuff\\more-dom.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-10-17T18:00:06.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "holygrail-grid.html",
+              "DocumentMoniker": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\holygrail-grid\\holygrail-grid.html",
+              "RelativeDocumentMoniker": "235\\holygrail-grid\\holygrail-grid.html",
+              "ToolTip": "C:\\Users\\guess\\source\\repos\\IGME-235-Repository\\235\\holygrail-grid\\holygrail-grid.html",
+              "RelativeToolTip": "235\\holygrail-grid\\holygrail-grid.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-10-14T03:34:16.864Z"
             }
           ]
         }
