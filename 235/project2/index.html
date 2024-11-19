@@ -213,6 +213,9 @@
                     }
                 }
             }
+            else {
+                pokemonList4 = pokemonList3;
+            }
 
             // Make a string to add the pokemon to the HTML
             let bigString = "";
@@ -229,8 +232,13 @@
 
                 // Add the first 4 moves to the HTML
                 // CHANGE LATER TO INCLUDE ACTUAL CALCULATIONS FOR MOST OPTIMAL MOVES
-                for (let j = 0; j < 4; j++) {
-                    line += `<p>${pokemonList4[i].moves[j].move.name}</p> `;
+                try {
+                    for (let j = 0; j < 4; j++) {
+                        line += `<p>${pokemonList4[i].moves[j].move.name}</p> `;
+                    }
+                }
+                catch (err) {
+                    continue;
                 }
 
                 line += `</div></section>`
