@@ -84,6 +84,7 @@
         let pokemonList2 = []; // Contains the url of the pokemon
         let pokemonList3 = []; // Contains the list of pokemon
         let pokemonList4 = []; // Contains the list of pokemon after sorting through types
+        let moveList = [];
 
         const API_URL = "https://pokeapi.co/api/v2/";
 
@@ -114,28 +115,28 @@
 
         function getType(url) {
             // Create a new XHR object
-            let xhr = new XMLHttpRequest();
+            let xhr1 = new XMLHttpRequest();
 
             // Set the onload handler. Called when the data is successfully loaded
-            xhr.onload = typeLoaded;
+            xhr1.onload = typeLoaded;
 
             // Set the onerror handler. Called when error occurs
-            xhr.onerror = dataError;
+            xhr1.onerror = dataError;
 
             // Open connection and send the request
-            xhr.open("GET", url);
-            xhr.send();
+            xhr1.open("GET", url);
+            xhr1.send();
         }
 
         function typeLoaded(e) {
             // event.target is the xhr object
-            let xhr = e.target;
+            let xhr1 = e.target;
 
             // xhr.responseText is JSON file we just downloaded
             // console.log(xhr.responseText);
 
             // Turned the text into a JavaScript object
-            let obj = JSON.parse(xhr.responseText);
+            let obj = JSON.parse(xhr1.responseText);
 
             // Contains the general information of type1 like moves and pokemon etc.
             pokemonList1 = obj;
@@ -148,7 +149,7 @@
             }
 
             // Call of the urls in list 2 so as to get the actual info of each pokemon
-            for (let i = 1; i < pokemonList2.length; i++) {
+            for (let i = 0; i < pokemonList2.length; i++) {
                 getPokemon(pokemonList2[i].pokemon.url);
             }
 
@@ -177,28 +178,28 @@
 
         function getPokemon(url) {
             // Create a new XHR object
-            let xhr = new XMLHttpRequest();
+            let xhr2 = new XMLHttpRequest();
 
             // Set the onload handler. Called when the data is successfully loaded
-            xhr.onload = pokemonLoaded;
+            xhr2.onload = pokemonLoaded;
 
             // Set the onerror handler. Called when error occurs
-            xhr.onerror = dataError;
+            xhr2.onerror = dataError;
 
             // Open connection and send the request
-            xhr.open("GET", url);
-            xhr.send();
+            xhr2.open("GET", url);
+            xhr2.send();
         }
 
         function pokemonLoaded(e) {
             // event.target is the xhr object
-            let xhr = e.target;
+            let xhr2 = e.target;
 
             // xhr.responseText is JSON file we just downloaded
             // console.log(xhr.responseText);
 
             // Turned the text into a JavaScript object
-            let obj = JSON.parse(xhr.responseText);
+            let obj = JSON.parse(xhr2.responseText);
 
             // Add information of the pokemon to list3
             pokemonList3.push(obj);
@@ -214,7 +215,7 @@
                 }
             }
             else {
-                pokemonList4 = pokemonList3;
+                pokemonList4.push(obj);
             }
 
             // Make a string to add the pokemon to the HTML
@@ -232,21 +233,99 @@
 
                 // Add the first 4 moves to the HTML
                 // CHANGE LATER TO INCLUDE ACTUAL CALCULATIONS FOR MOST OPTIMAL MOVES
-                try {
+
+                /*
+                moveList = [];
+
+                
+                for (let j = 0; j < pokemonList4[i].moves.length; j++) {
+                    getMove(pokemonList4[i].moves[j].move.url);
+
+                }
+                */
+
+                if (pokemonList4[i].moves.length == 1) {
+                    line += `<p>${pokemonList4[i].moves[0].move.name}`;
+
+                }
+                else if (pokemonList4[i].moves.length == 0) {
+                    line += `<p><b>Dynamax moves!</b></p>`
+                }
+                else {
+                    /*    Wasn't able to figure out a functional way to give optimal moves
+                        let random = 0;
+                        let counter = 0;
+                        let condition = "attack";
+    
+                        while (counter < 4) {
+                            random = Math.floor(Math.random() * moveList.length);
+    
+                            if (counter == 2) {
+                                condition = "atkStat";
+                            }
+    
+                            if (condition == "attack") {
+                                if (moveList[random].type.name == type1 || moveList[random].type.name == type2) {
+                                    // Add to string
+                                    line += `<p>${moveList[random].name}</p>`;
+    
+                                    counter += 1;
+                                }
+                            }
+    
+                            if (condition == "atkStat") {
+                                if (moveList[random].target.name == "user" && moveList[random].stat_changes.length > 0) {
+                                    // Add to string
+                                    line += `<p>${moveList[random].name}</p>`;
+    
+                                    counter += 1;
+                                }
+                            }
+                            */
+
+
                     for (let j = 0; j < 4; j++) {
-                        line += `<p>${pokemonList4[i].moves[j].move.name}</p> `;
+                        let random = Math.floor(Math.random() * pokemonList4[i].moves.length);
+
+                        line += `<p>${pokemonList4[i].moves[random].move.name}</p> `;
                     }
-                }
-                catch (err) {
-                    continue;
-                }
+                }  
 
                 line += `</div></section>`
-
                 bigString += line;
+
             }
 
             document.querySelector("#results").innerHTML = bigString;
+        }
+
+
+        function getMove(url) {
+            // Create a new XHR object
+            let xhr3 = new XMLHttpRequest();
+
+            // Set the onload handler. Called when the data is successfully loaded
+            xhr3.onload = moveLoaded;
+
+            // Set the onerror handler. Called when error occurs
+            xhr3.onerror = dataError;
+
+            // Open connection and send the request
+            xhr3.open("GET", url);
+            xhr3.send();
+        }
+
+        function moveLoaded(e) {
+            // event.target is the xhr object
+            let xhr3 = e.target;
+
+            // xhr.responseText is JSON file we just downloaded
+            // console.log(xhr.responseText);
+
+            // Turned the text into a JavaScript object
+            let obj = JSON.parse(xhr3.responseText);
+
+            moveList.push(obj);
         }
 
         function dataError(e) {
