@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Pokemon Random Moveset Generator</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Numans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <h1>Pokemon Random Moveset Generator</h1>
+
+        <p>You can get random movesets for Pokemon of specific types. 
+        Make sure to select Type 1 first: </p>
+        <div id="type-select">
+            <select id="type1">
+                <option value="">Type 1</option>
+                <option value="normal">Normal</option>
+                <option value="fighting">Fighting</option>
+                <option value="flying">Flying</option>
+                <option value="poison">Poison</option>
+                <option value="ground">Ground</option>
+                <option value="rock">Rock</option>
+                <option value="bug">Bug</option>
+                <option value="ghost">Ghost</option>
+                <option value="steel">Steel</option>
+                <option value="fire">Fire</option>
+                <option value="water">Water</option>
+                <option value="grass">Grass</option>
+                <option value="electric">Electric</option>
+                <option value="psychic">Psychic</option>
+                <option value="ice">Ice</option>
+                <option value="dragon">Dragon</option>
+                <option value="dark">Dark</option>
+                <option value="fairy">Fairy</option>
+            </select>
+            <select id="type2">
+                <option value="">Type 2 (Optional)</option>
+                <option value="normal">Normal</option>
+                <option value="fighting">Fighting</option>
+                <option value="flying">Flying</option>
+                <option value="poison">Poison</option>
+                <option value="ground">Ground</option>
+                <option value="rock">Rock</option>
+                <option value="bug">Bug</option>
+                <option value="ghost">Ghost</option>
+                <option value="steel">Steel</option>
+                <option value="fire">Fire</option>
+                <option value="water">Water</option>
+                <option value="grass">Grass</option>
+                <option value="electric">Electric</option>
+                <option value="psychic">Psychic</option>
+                <option value="ice">Ice</option>
+                <option value="dragon">Dragon</option>
+                <option value="dark">Dark</option>
+                <option value="fairy">Fairy</option>
+            </select>
+
+            <button name="generate" id="generate">Generate</button>
+        </div>
+
+        <div>
+            <p>Max # of Pokemon displayed ->
+            <select id="limit">
+                <option value="25" selected>25</option>
+                <option value="50">50</option>
+                <option value="75">75</option>
+                <option value="100">100</option>
+                <option value="125">125</option>
+                <option value="150">150</option>
+            </select>
+            </p>
+        </div>
+
+        <p id="status">Ready to search!</p>
+
+        <h2>Results:</h2>
+        <div id="results">
+            <p>No results yet</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© Cedric Guessou 2024</p>
+        <a href="https://pokeapi.co/">Pokemon API Link</a><br>
+        <a href="doc.html">Documentation Link</a>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

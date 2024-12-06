@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>IGME-235 Project 2 Documentation</title>
+    <style>
+        body{
+            max-width: 1000px;
+        }
+        img{
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>IGME-235 Project 2 Documentation</h1>
+    <h2>Goal</h2>
+    <p>
+        My plan is to use the Pokemon API to make a website that searches 
+        for Pokemon based on types selected by the user and also provides a sample move set for it to use.
+        The target audience for this project is casual players who just want to have a solid move set for their Pokemon. 
+        If I end up having enough time, I will improve my algorithm to select the moves based on the specific game.
+    </p>
+
+    <h2>Notes Part 1</h2>
+    <ul>
+        <li>
+            I will be assuming that the Pokemon is being used in a 1v1 format (so as to avoid more complicated logic).
+        </li>
+        <li>
+            The move set type will be determined by the chosen Pokemon's stats. For example:
+            If the Pokemon has Attack and Special Attack as its highest stats an offensive move set will be created.
+        </li>
+        <li>
+            Use the stats property to campare and see what type of moveset this Pokemon should use
+        </li>
+    </ul>
+
+    <h2>Moveset Types</h2>
+    <ul>
+        <li>
+            <b>Main Damage Dealers (Offensive): </b>Chosen if attack or special attack is the dominant stat. 
+            They have two offensive moves that match their typing, one move to counter
+            types they are weak to and another move for stat buffs
+        </li>
+    </ul>
+
+    <h2>Basic Sketch</h2>
+    <img src="src/template.png" alt="Website Sketch Image">
+
+    <h2>Peer Feedback Suggestions</h2>
+    <ul>
+        <li>
+            G-max Pokemon return errors because they have no moves stored in the API. 
+            Pokemon with single moves like Ditto as well. Find a way to prevent that. (Done)
+        </li>
+        <li>
+            Make the background color change based on the selected type. When two types are selected make it half 
+            and half (unlikely to implement due to having to change a lot of stuff in CSS) (Not done).
+        </li>
+        <li>
+            Make everything bigger. (Done)
+        </li>
+        <li>
+        Add a way to limit the number of Pokemon displayed (Done)
+        </li>
+        <li>
+            Change the background based on the Pokemon type selected (Not done)
+        </li>
+    </ul>
+
+    <h2>Notes Part 2</h2>
+    <ul>
+        <li>
+            The objective of the website was changed from "Displaying optimal Pokemon movesets" to "Displaying random movesets". 
+            Reason being that I wasn't able to figure out logic to get data from the Pokemon's moves without having the website 
+            running really slowly.
+        </li>
+        <li>
+            Generate button won't work if Type 1 is not selected.
+        </li>
+    </ul>
+
+    <h2>How it works</h2>
+    <ul>
+        <li>
+            When the generate button is pressed, it retrieves the value of the two type selection boxes. Using that value, 
+            an API call is made to access that type section of the Pokemon API.
+        </li>
+        <li>
+            After accessing the section of the API reserved for the first type, we access the pokemon property  
+            to get the URLs of all the Pokemon of that type. We then run another API call to access each 
+            one of those Pokemon's information and add references in the form of a list.
+        </li>
+        <li>
+            If a second type was selected, we go through every Pokemon in the list and check if they contain the second type. If 
+            a Pokemon is of both types it is added to a new list that will be used to display the final information.
+        </li>
+        <li>
+            After the final Pokemon are added in, a method is run to randomly select 4 moves from their move pools (There is code 
+            to handle Pokemon with less than 4 moves). We then format each Pokemon output in a grid square manner and 
+            add it to our HTML.
+        </li>
+    </ul>
+
+    <h2>Resources</h2>
+    <a href="https://pokeapi.co/">Pokemon API Documentation Link</a>
+</body>
+</html>

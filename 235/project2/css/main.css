@@ -1,0 +1,77 @@
+﻿html {
+    background-image: url(../media/background-image.jpg);
+    font-family: Gill Sans;
+    font-size-adjust: .5;
+}
+
+body {
+    margin: 0 10%;
+    border: 2px solid black;
+    background-color: lightblue;
+}
+
+main {
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    border-bottom: 5px solid black;
+}
+
+h2{
+}
+
+select {
+    font-family: Cambria;
+    font-size: 18px;
+}
+
+button {
+    font-family: Cambria;
+    font-size: 18px;
+}
+
+footer{
+    border-top: 3px solid black;
+    line-height: 30px;
+}
+
+#results {
+    /*max-width: 650px;*/
+    margin: 0 auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.pokemon {
+    max-width: 200px;
+    border: 1px solid gray;
+    padding: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    background-image: url(../media/pokemon-background.jpg);
+    font-family: 'Cambria Math';
+}
+
+.pokemon img{
+    border-bottom: 2px solid black;
+    /*background-color: gray;*/
+}
+
+.pokemon .moves{
+    font-size: 15px;
+    background-color: white;
+    border: none;
+}
+
+.pokemon-name {
+    border-bottom: 2px solid black;
+    font-size: 15px;
+    position: relative;
+    top: -15px;
+}
+

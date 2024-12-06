@@ -1,0 +1,26 @@
+﻿html{
+    background-color: saddlebrown;
+    font-family:'Bell MT';
+}
+
+body
+{
+    background-color: white;
+    padding-left: 10px;
+    margin: 0px auto;
+    max-width: 1200px;
+}
+
+img{
+    max-width: 500px;
+    border: 2px solid black
+}
+
+h2{
+    border-top: 5px solid black;
+    color: brown
+}
+
+h3{
+    color: dodgerblue
+}
