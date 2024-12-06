@@ -1,25 +1,34 @@
 "using strict";
 
 window.onload = (e) => {
-    document.querySelector("#generate").onclick = generateButtonClicked
-
-    // Get the types that were selected
-    type1 = document.querySelector("#type1").value;
-    type2 = document.querySelector("#type2").value;
+    document.querySelector("#generate").onclick = generateButtonClicked;
+    grabStoredData(type1, type1Key);
+    grabStoredData(type2, type2Key);
 }
 
-let type1;
-let type2;
+
+let type1 = document.querySelector("#type1");
+let type2 = document.querySelector("#type2");
+let limit;
 let pokemonList1; // Contains the unfiltered list of pokemon
 let pokemonList2 = []; // Contains the url of the pokemon
 let pokemonList3 = []; // Contains the list of pokemon
 let pokemonList4 = []; // Contains the list of pokemon after sorting through types
+let moveList = [];
+let count = 0; // Everytime a pokemon is filtered by type count increases. When all the pokemon from list2
+// have been filtered through then we can add them to the HTML
+
+// Storage stuff
+const prefix = "cdd8606";
+const type1Key = prefix + "type1";
+const type2Key = prefix + "type2";
+
+type1.onchange = e => { localStorage.setItem(type1Key, e.target.value); };
+type2.onchange = e => { localStorage.setItem(type2Key, e.target.value); };
+
+
 
 const API_URL = "https://pokeapi.co/api/v2/";
-
-// Maybe save the type selected
-
-
 
 // Generate button
 function generateButtonClicked() {
@@ -28,8 +37,13 @@ function generateButtonClicked() {
     pokemonList2 = [];
     pokemonList3 = [];
     pokemonList4 = [];
+    count = 0;
 
-    
+    // Get the types that were selected
+    type1 = document.querySelector("#type1").value;
+    type2 = document.querySelector("#type2").value;
+
+    limit = document.querySelector("#limit").value;
 
     // Get a link to the section of the API about selected type1
     let url = API_URL + "type/";
@@ -42,31 +56,38 @@ function generateButtonClicked() {
 
 function getType(url) {
     // Create a new XHR object
-    let xhr = new XMLHttpRequest();
+    let xhr1 = new XMLHttpRequest();
 
     // Set the onload handler. Called when the data is successfully loaded
-    xhr.onload = typeLoaded;
+    xhr1.onload = typeLoaded;
 
     // Set the onerror handler. Called when error occurs
-    xhr.onerror = dataError;
+    xhr1.onerror = dataError;
 
     // Open connection and send the request
-    xhr.open("GET", url);
-    xhr.send();
+    xhr1.open("GET", url);
+    xhr1.send();
 }
 
 function typeLoaded(e) {
     // event.target is the xhr object
-    let xhr = e.target;
+    let xhr1 = e.target;
 
     // xhr.responseText is JSON file we just downloaded
-    // console.log(xhr.responseText);
 
     // Turned the text into a JavaScript object
-    let obj = JSON.parse(xhr.responseText);
+    let obj = JSON.parse(xhr1.responseText);
 
     // Contains the general information of type1 like moves and pokemon etc.
     pokemonList1 = obj;
+
+    // If there is no results, print an error and return
+    if (pokemonList1.pokemon == undefined) {
+
+        document.querySelector("#status").innerHTML = "<b>No results found for '" + type1 + type2 + "'</b>";
+
+        return;
+    }
 
     // Go through the first pokemon list and add the url to the Pokemon to
     // list two. All these pokemon are of type type1
@@ -76,57 +97,43 @@ function typeLoaded(e) {
     }
 
     // Call of the urls in list 2 so as to get the actual info of each pokemon
-    for (let i = 1; i < pokemonList2.length; i++) {
+    for (let i = 0; i < pokemonList2.length; i++) {
         getPokemon(pokemonList2[i].pokemon.url);
     }
-
 
     // If there is no results, print an error and return
     if (!obj) {
         document.querySelector("#status").innerHTML = "<b>No results found for '" + type1 + "'</b>";
         return;
     }
-
-    // Use the pokemon property to make a list of pokemon gotten from the 
-    // pokemon
-
-    // - Make sure to check whether the Pokemon also contains type2. If yes,
-    // add it a ?list?
-
-
-    // - Once we have all the pokemon that fulfil the type requirement, make pokemon
-    // objects using their names and sprites
-    // - Have to write algorithm to pick the most optimal moves, but for now just put
-    // the first 4 moves in the list
-    // - To finish up, use all the pokemon objects to make boxes that will be displayed
-    // on the website
-
 }
 
 function getPokemon(url) {
     // Create a new XHR object
-    let xhr = new XMLHttpRequest();
+    let xhr2 = new XMLHttpRequest();
 
     // Set the onload handler. Called when the data is successfully loaded
-    xhr.onload = pokemonLoaded;
+    xhr2.onload = pokemonLoaded;
 
     // Set the onerror handler. Called when error occurs
-    xhr.onerror = dataError;
+    xhr2.onerror = dataError;
 
     // Open connection and send the request
-    xhr.open("GET", url);
-    xhr.send();
+    xhr2.open("GET", url);
+    xhr2.send();
 }
 
 function pokemonLoaded(e) {
     // event.target is the xhr object
-    let xhr = e.target;
+    let xhr2 = e.target;
 
     // xhr.responseText is JSON file we just downloaded
     // console.log(xhr.responseText);
 
     // Turned the text into a JavaScript object
-    let obj = JSON.parse(xhr.responseText);
+    let obj = JSON.parse(xhr2.responseText);
+
+    obj.name = capitalizeFirstLetter(obj.name);
 
     // Add information of the pokemon to list3
     pokemonList3.push(obj);
@@ -141,69 +148,123 @@ function pokemonLoaded(e) {
             }
         }
     }
-
-    // Make a string to add the pokemon to the HTML
-    let bigString = "";
-
-    // Go through ever pokemon in list4
-    for (let i = 0; i < pokemonList4.length; i++) {
-        let sprite = pokemonList4[i].sprites.front_default; // The sprite of the specific pokemon
-
-        // Build a div for each result
-        let line = `<section class = 'pokemon'><p>${pokemonList4[i].name}</p>
-                <img src = '${sprite}' title = '${pokemonList4[i].name}'>`;
-
-        line += `<div class = 'moves'>`;
-
-        // Add the first 4 moves to the HTML
-        // CHANGE LATER TO INCLUDE ACTUAL CALCULATIONS FOR MOST OPTIMAL MOVES
-        for (let j = 0; j < 4; j++) {
-            line += `<p>${pokemonList4[i].moves[j].move.name}</p> `;
-        }
-
-        line += `</div></section>`
-
-        bigString += line;
+    else {
+        pokemonList4.push(obj);
     }
 
-    document.querySelector("#results").innerHTML = bigString;
+    count++;
+
+    if (count >= pokemonList2.length) {
+        // Put the pokemon in order
+        pokemonList4.sort(function (a, b) { return a.id - b.id })
+
+        // Make a string to add the pokemon to the HTML
+        let bigString = "";
+        let limitCount = 0;
+
+        // Go through ever pokemon in list4
+        for (let i = 0; i < pokemonList4.length; i++) {
+
+            if (limitCount >= limit) { break; }
+            let sprite = pokemonList4[i].sprites.front_default; // The sprite of the specific pokemon
+
+            // Build a div for each result
+            let line = `<section class = 'pokemon'><p class = 'pokemon-name' 
+                    num="${pokemonList4[i].id}">#${pokemonList4[i].id} ${pokemonList4[i].name}</p>
+                    <img src = '${sprite}' title = '${pokemonList4[i].name}'>`;
+
+            line += `<div class = 'moves'>`;
+
+            // Adding moves----------------------------------
+            // If the Pokemon has one move (e.g Ditto) add the singular move to the output
+            if (pokemonList4[i].moves.length == 1) {
+                let move = capitalizeFirstLetter(pokemonList4[i].moves[0].move.name);
+                line += `<p>${move}`;
+
+            }
+            // If the Pokemon has no moves (i.e Gigantamax Pokemon) just put something there
+            else if (pokemonList4[i].moves.length == 0) {
+                line += `<p><b>Gigantamax moves!</b></p>`
+            }
+            // If the Pokemon has an actual move pool select 4 random moves
+            else {
+                for (let j = 0; j < 4; j++) {
+                    let random = Math.floor(Math.random() * pokemonList4[i].moves.length);
+
+                    let move = capitalizeFirstLetter(pokemonList4[i].moves[random].move.name);
+                    line += `<p>${move}</p> `;
+                }
+            }
+
+            line += `</div></section>`
+            bigString += line;
+
+            limitCount++;
+
+        }
+
+        document.querySelector("#results").innerHTML = bigString;
+
+        // If there are no results display message
+        if (pokemonList4.length <= 0) {
+            document.querySelector("#results").innerHTML = "<b>No results found for '" + type1 + "' and '" + type2 + "'</b>";
+            return;
+        }
+    }
+}
+
+
+function getMove(url) {
+    // Create a new XHR object
+    let xhr3 = new XMLHttpRequest();
+
+    // Set the onload handler. Called when the data is successfully loaded
+    xhr3.onload = moveLoaded;
+
+    // Set the onerror handler. Called when error occurs
+    xhr3.onerror = dataError;
+
+    // Open connection and send the request
+    xhr3.open("GET", url);
+    xhr3.send();
+}
+
+function moveLoaded(e) {
+    // event.target is the xhr object
+    let xhr3 = e.target;
+
+    // xhr.responseText is JSON file we just downloaded
+    // console.log(xhr.responseText);
+
+    // Turned the text into a JavaScript object
+    let obj = JSON.parse(xhr3.responseText);
+
+    moveList.push(obj);
+}
+
+function grabStoredData(nameField, nameKey) {
+    // grab the stored data, will return `null` if the user has never been to this page
+    const storedName = localStorage.getItem(nameKey);
+
+    // if we find a previously set name value, display it
+    if (storedName) {
+        nameField.value = storedName;
+    }
+    else {
+        nameField.value = "Type 1"; // a default value if `nameField` is not found
+    }
+}
+
+function capitalizeFirstLetter(word) {
+    // Access first letter using 0 index
+    let letter = word[0].toUpperCase()
+
+    // Update the string 
+    word = letter + word.slice(1)
+
+    return word;
 }
 
 function dataError(e) {
     console.log("An error occured");
 }
-
-// Pokemon class (Not being used yet)
-function createPokemon(name, sprite, moves = [4]) {
-    let pokemon = {
-        name: name,
-        sprite: sprite,
-        moves: moves
-    }
-
-    return pokemon;
-}
-
-// Check if the Pokemon is of both types  (Not being used yet)
-function CheckTyping(pokemon) {
-    for (let i = 0; i < 2; i++) {
-        if (pokemon.types[i].type.name == type2) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-}
-
-// Not being used yet
-function CheckPokemon() {
-    for (let i = 0; i < pokemonList3.length; i++) {
-        for (let j = 0; i < pokemonList3[i].types.length; i++) {
-            if (pokemonList3[i].types[j].type.name == type2) {
-                pokemonList4.push(pokemonList3[i])
-            }
-        }
-    }
-}
-
