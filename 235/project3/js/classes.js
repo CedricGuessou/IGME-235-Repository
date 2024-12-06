@@ -5,6 +5,8 @@ class Knight extends PIXI.AnimatedSprite{
         super(texture);
         this.anchor.set(0.5, 0.5); // Position, scaling, rotating etc are now from center of the sprite
         this.scale.set(2);
+        this.loop = false;
+        this.animationSpeed = .3;
         this.x = x;
         this.y = y;
         this.play();
@@ -12,6 +14,10 @@ class Knight extends PIXI.AnimatedSprite{
 
     movement(keys) {
         if (keys["87"]) {
+            if(!this.playing){
+                this.textures = kSheet.walkUp;
+                this.play();
+            }
             this.y -= 3;
             // Box will spawn above
             attackBox.x = this.x;
@@ -20,6 +26,10 @@ class Knight extends PIXI.AnimatedSprite{
         }
     
         if (keys["65"]) {
+            if(!this.playing){
+                this.textures = kSheet.walkLeft;
+                this.play();
+            }
             this.x -= 3;
 
             // Box will spawn to the left
@@ -29,6 +39,10 @@ class Knight extends PIXI.AnimatedSprite{
         }
     
         if (keys["83"]) {
+            if(!this.playing){
+                this.textures = kSheet.walkDown;
+                this.play();
+            }
             this.y += 3;
 
             // Box will spawn under
@@ -38,6 +52,10 @@ class Knight extends PIXI.AnimatedSprite{
         }
     
         if (keys["68"]) {
+            if(!this.playing){
+                this.textures = kSheet.walkRight;
+                this.play();
+            }
             this.x += 3;
 
             // Box will spawn to the right

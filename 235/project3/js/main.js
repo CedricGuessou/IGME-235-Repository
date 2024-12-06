@@ -1,7 +1,6 @@
 "use strict";
 const app = new PIXI.Application();
 
-// import { Assets } from 'pixi.js';
 
 let sceneWidth, sceneHeight;
 
@@ -221,6 +220,7 @@ function startGame() {
     // attackBox.rect(0, 0, 90, 100);
     // attackBox.fill(0xffffff);
     attackBox.anchor.set(.5);
+    attackBox.scale.set(.75);
     gameScene.addChild(attackBox);
     attackBox.visible = false;
 
